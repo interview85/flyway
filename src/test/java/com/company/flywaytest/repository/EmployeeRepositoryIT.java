@@ -36,7 +36,7 @@ class EmployeeRepositoryIT {
     @Test
     @Disabled
     public void getAllEmployeesWithEverythingByDepId() {
-        Set<Employee> result = employeeRepository.findEmployeesByDepartment_DepId(1L);
+        Set<Employee> result = employeeRepository.findEmployeesWithMinByDepartment_DepId(1L);
         assertThat("Not the right size!", result, hasSize(3));
     }
 
