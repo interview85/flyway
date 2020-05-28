@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "domain")
 public class Domain {
     @Id
-    private Long prjId;
+    private Long domId;
 
     @Column(name = "name")
     private String name;

@@ -7,6 +7,7 @@ import lombok.NonNull;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -14,6 +15,11 @@ import java.util.Set;
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
+
+    @Transactional(readOnly = true)
+    public List<Employee> findAllEmployees() {
+        return employeeRepository.findAll();
+    }
 
     @Transactional(readOnly = true)
     public Set<Employee> findAllEmployeesWithMinByDepId(@NonNull final Long depId) {

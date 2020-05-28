@@ -10,7 +10,7 @@ import java.util.Set;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
-    @EntityGraph(value = "Employee.min", type = EntityGraph.EntityGraphType.LOAD)
+    //@EntityGraph(value = "Employee.min", type = EntityGraph.EntityGraphType.LOAD)
     Set<Employee> findEmployeesWithMinByDepartment_DepId(Long depId);
 
     @EntityGraph(value = "Employee.everything", type = EntityGraph.EntityGraphType.LOAD)
