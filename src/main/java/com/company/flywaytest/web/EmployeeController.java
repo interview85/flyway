@@ -1,14 +1,11 @@
 package com.company.flywaytest.web;
 
-import com.company.flywaytest.entity.Employee;
 import com.company.flywaytest.service.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Set;
 
 @RestController
 @AllArgsConstructor
